@@ -6,6 +6,7 @@ Method = 'VE'; % VE -- verlot; FD -- Forward Difference
 
 Mass0 = 14 * C.am; % Silicon
 Mass1 = 5 * C.am; % Argon
+Mass2 = 8 * C.am;
 
 AtomSpacing = 0.5430710e-9;
 LJSigma = AtomSpacing / 2^(1/6);
@@ -15,7 +16,7 @@ PhiCutoff = 3 * AtomSpacing * 1.1;
 
 T = 30;
 
-AddCircAtomicArray(10, 0, 0, 0, 0, 0, T, 0);
+AddEclipAtomicArray(10, 5, 0, 0, 0, 0, 0, T, 0);
 
 Size = 20 * AtomSpacing;
 Limits = [-Size +Size -Size +Size]; % square is good
